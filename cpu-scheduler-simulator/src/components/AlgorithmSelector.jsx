@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AlgorithmSelector({ algorithm, setAlgorithm, timeQuantum, setTimeQuantum ,queues, setQueues }) {
+function AlgorithmSelector({ algorithm, setAlgorithm, timeQuantum, setTimeQuantum ,algorithmstate}) {
   return (
     <div className="ml-8 mb-8">
       <h2 className="text-xl font-semibold mb-4">Select Algorithm</h2>
@@ -14,7 +14,7 @@ function AlgorithmSelector({ algorithm, setAlgorithm, timeQuantum, setTimeQuantu
         <option value="RoundRobin">Round Robin</option>
         <option value="Priority">Priority Scheduling</option>
         <option value="MultilevelQueue">Multilevel Queue</option>
-        {/* <option value="MultilevelFeedbackQueue">Multilevel Feedback Queue</option> */}
+
         <option value="SRTF">Shortest Remaining Time First (SRTF)</option>
         <option value="HRRN">Highest Response Ratio Next (HRRN)</option>
         <option value="LJF">Longest Job First (LJF)</option>
@@ -22,7 +22,7 @@ function AlgorithmSelector({ algorithm, setAlgorithm, timeQuantum, setTimeQuantu
         <option value="SJN">Shortest Job Next (SJN)</option>
 
       </select>
-      {(algorithm === 'RoundRobin'|| algorithm === 'MultilevelQueue' )&& (
+      {(algorithm === 'RoundRobin'|| algorithm === 'MultilevelQueue')&& (
         <div className="mt-4">
           <label className="block text-sm font-medium text-gray-700">
             Time Quantum:
